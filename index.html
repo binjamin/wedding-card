@@ -11,234 +11,285 @@
             margin: 0;
             padding: 0;
             font-family: 'Noto Serif Ethiopic', 'Times New Roman', serif;
-            background-color: #f7f2e9;
-            color: #2b2b2b;
+            background-color: #f4ebd9; /* የብራና ወረቀት መልክ */
+            color: #2c2520;
             text-align: center;
-            background-image: radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 0);
-            background-size: 24px 24px;
         }
 
-        /* የሀበሻ ጥበብ ዲዛይን በላይና በታች */
-        .tilet-border {
-            background: linear-gradient(90deg, #8a1c14 0%, #d4af37 25%, #115740 50%, #d4af37 75%, #8a1c14 100%);
-            height: 15px;
+        /* 1000024911.jpg ላይ ያለውን የመሰለ ውብ የሐበሻ ጥበብ ጠርዝ */
+        .tilet-top {
+            background: linear-gradient(90deg, #8a1c14 0%, #e5b842 25%, #115740 50%, #e5b842 75%, #8a1c14 100%);
+            height: 20px;
             width: 100%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .wrapper {
+            padding: 20px;
+            background-image: url('https://www.transparenttextures.com/patterns/parchment.png'); /* የብራና ቴክስቸር */
         }
 
         .container {
             max-width: 650px;
-            margin: 40px auto;
-            padding: 30px 20px;
+            margin: 30px auto;
+            padding: 40px 25px;
             background: #fffdf9;
-            border-radius: 4px;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.1);
-            border: 2px solid #d4af37;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(138, 28, 20, 0.15);
+            border: 3px double #e5b842;
             position: relative;
+            overflow: hidden;
         }
 
-        /* የወርቅ ቀለበት ምልክት */
-        .rings {
-            font-size: 3rem;
-            margin: 15px 0;
-            color: #d4af37;
+        /* የኢትዮጵያ ኦርቶዶክስ የቁልፍ ምልክቶች (ዘውድና ቀለበት) */
+        .holy-crowns {
+            font-size: 3.5rem;
+            margin-top: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         .religious-text {
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-style: italic;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            border-bottom: 1px dashed #d4af37;
-            padding-bottom: 15px;
+            color: #4a3f35;
+            line-height: 1.8;
+            margin: 20px auto;
+            max-width: 85%;
+            border-bottom: 1px solid #e5b842;
+            padding-bottom: 20px;
+        }
+
+        /* የሙሽሮች ምስል ማሳያ (ከፋይል 1000024912.jpg ጋር ተመሳሳይ የሐበሻ ልብስ ምስል) */
+        .habesha-couple-img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 50% 50% 0 0; /* የቅስት ቅርጽ */
+            border: 4px solid #e5b842;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         h1 {
-            font-size: 2.2rem;
-            color: #8a1c14;
+            font-size: 2.4rem;
+            color: #8a1c14; /* የጥበቡ ደማቅ ቀይ ቀለም */
             margin: 10px 0;
-            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
         }
 
-        .and {
+        .cross-separator {
             font-size: 1.5rem;
-            color: #d4af37;
-            margin: 5px 0;
-            display: block;
+            color: #e5b842;
+            margin: 10px 0;
         }
 
         .invitation-body {
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1.15rem;
+            line-height: 1.9;
             margin: 30px 0;
-            padding: 0 15px;
         }
 
         .highlight-date {
-            font-size: 1.3rem;
-            color: #8a1c14;
+            font-size: 1.4rem;
+            color: #115740; /* የጥበቡ አረንጓዴ ቀለም */
             font-weight: bold;
-            background: #fff8e7;
-            padding: 8px;
-            border-radius: 5px;
+            background: #f0f9f4;
+            padding: 10px 20px;
+            border-radius: 30px;
             display: inline-block;
             margin: 15px 0;
-            border: 1px solid #e9d595;
+            border: 1px solid #a3d1bd;
         }
 
-        /* የፕሮግራም ሰሌዳ */
+        /* የዕለት መርሃ-ግብር ዲዛይን (timeline ስታይል) */
+        .schedule-section {
+            background: #fffbf2;
+            border: 1px solid #e5b842;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
         .schedule-title {
             font-size: 1.4rem;
-            color: #115740;
-            margin-top: 40px;
-            text-decoration: underline;
+            color: #8a1c14;
+            margin-top: 0;
+            margin-bottom: 20px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        .schedule-table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 5px;
+            border-bottom: 1px dashed #e5b842;
             text-align: left;
         }
 
-        .schedule-table tr {
-            border-bottom: 1px solid #f0e6cf;
-        }
-
-        .schedule-table td {
-            padding: 10px;
-            font-size: 1rem;
+        .timeline-item:last-child {
+            border-bottom: none;
         }
 
         .time {
             font-weight: bold;
-            color: #8a1c14;
-            width: 25%;
-            white-space: nowrap;
+            color: #115740;
+            width: 30%;
         }
 
-        .parents-section {
-            margin-top: 35px;
-            font-size: 1rem;
-            background: #fdfaf2;
+        .event {
+            width: 70%;
+            color: #333;
+        }
+
+        .parents {
+            margin: 30px 0;
+            font-size: 1.1rem;
+            background: #fcf6e8;
             padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #115740;
+            border-left: 5px solid #8a1c14;
+            text-align: left;
         }
 
         .footer-address {
-            margin-top: 30px;
-            font-size: 0.95rem;
-            color: #444;
-            background: #f4edd9;
-            padding: 10px;
+            margin-top: 40px;
+            font-size: 1rem;
+            background: #8a1c14;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 4px;
             font-weight: bold;
         }
 
-        /* የግብዣ ቁልፍ (RSVP) */
+        /* የሙዚቃ ማጫወቻ እና RSVP ማስተካከያ */
+        .audio-player {
+            margin: 20px 0;
+        }
+
         .rsvp-btn {
             display: inline-block;
-            background-color: #115740;
+            background: linear-gradient(135deg, #115740, #0d4230);
             color: white;
-            padding: 12px 35px;
+            padding: 14px 40px;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 30px;
             font-weight: bold;
-            margin: 25px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(17, 87, 64, 0.3);
             transition: 0.3s;
         }
+
         .rsvp-btn:hover {
-            background-color: #8a1c14;
+            background: linear-gradient(135deg, #8a1c14, #6b120c);
+            box-shadow: 0 4px 15px rgba(138, 28, 20, 0.3);
         }
     </style>
 </head>
 <body>
 
-    <div class="tilet-border"></div>
+    <div class="tilet-top"></div>
 
-    <div class="container">
-        <div class="rings"> Rings 💍 </div>
-        
-        <div class="religious-text">
-            "በስመ አብ ወወልድ ወመንፈስ ቅዱስ አሀዱ አምላክ አሜን።"<br>
-            "ሰው አባቱንና እናቱን ይተዋል ከሚስቱም ጋር ይተባበራል ሁለቱም አንድ ሥጋ ይሆናሉ።"
-        </div>
+    <div class="wrapper">
+        <div class="container">
+            
+            <!-- በኦርቶዶክስ ስርዓት የጋብቻ ዘውዶች ምልክት -->
+            <div class="holy-crowns">👑 💍 👑</div>
+            
+            <div class="religious-text">
+                <strong>"በስመ አብ ወወልድ ወመንፈስ ቅዱስ አሀዱ አምላክ አሜን።"</strong><br>
+                "ሰው አባቱንና እናቱን ይተዋል ከሚስቱም ጋር ይተባበራል ሁለቱም አንድ ሥጋ ይሆናሉ።" <br>
+                <span style="font-size: 0.85rem; color:#8a1c14;">(ማቴዎስ ፲፱ ፡ ፭)</span>
+            </div>
 
-        <p style="font-size:1.1rem;">የማክበር ሰላምታችንን እያቀረብን የልጆቻችንን</p>
-        
-        <h1>አቶ ቢንያም ታደሰ</h1>
-        <span class="and">እና</span>
-        <h1>ወ/ት ወርቅነሽ ለማ</h1>
-        
-        <div class="invitation-body">
-            የጋብቻ ስነ-ስርዓት የሚፈጸመው <br>
-            <span class="highlight-date">እሑድ ሚያዝያ 19 / 2017 ዓ.ም</span> <br>
-            ስለሆነ በዚህ ዕለት በሰዓቱ ተገኝተው የደስታችን ተካፋይ ይሆኑ ዘንድ በአክብሮት ጠርተናችኋል።
-        </div>
+            <!-- የባህል አልባሳት ምስል (በምትኩ የእርስዎን ፎቶ መተካት ይችላሉ) -->
+            <img src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?w=600" alt="Habesha Wedding" class="habesha-couple-img">
 
-        <div class="parents-section">
-            <strong>አካባሪዎች፦</strong><br>
-            አቶ ታደሰ ደበሌ እና ወ/ሮ መሰረት በየነ
-        </div>
+            <p style="font-size: 1.1rem; font-weight: bold; color: #554433;">የማክበር ሰላምታችንን እያቀረብን የልጆቻችንን</p>
+            
+            <h1>አቶ ቢንያም ታደሰ</h1>
+            <div class="cross-separator">✥ ✥ ✥</div>
+            <h1>ወ/ት ወርቅነሽ ለማ</h1>
+            
+            <div class="invitation-body">
+                የጋብቻ ቅዱስ ስነ-ስርዓት የሚፈጸመው <br>
+                <span class="highlight-date">እሑድ ሚያዝያ 19 / 2017 ዓ.ም</span> <br>
+                በእግዚአብሔር ፈቃድ ስለሚፈጸም፣ በዚህ ዕለት በሰዓቱ ተገኝተው የቅዱስ ቁርባኑና የደስታችን ተካፋይ ይሆኑ ዘንድ በአክብሮት ጠርተናችኋል።
+            </div>
 
-        <h3 class="schedule-title">የዕለቱ መርሃ-ግብር</h3>
-        <table class="schedule-table">
-            <tr>
-                <td class="time">9:00 - 3:00</td>
-                <td>ስርዓተ ጋብቻ እና ቅዳሴ (በደብረ ስሑም መ/መ ቅዱስ ዮሐንስ ቤ/ክ)</td>
-            </tr>
-            <tr>
-                <td class="time">3:30</td>
-                <td>የቤተክርስቲያን ፕሮግራም ይጠናቀቃል</td>
-            </tr>
-            <tr>
-                <td class="time">4:00</td>
-                <td>ከቤ/ክ ወደ ሙሽራው ቤት</td>
-            </tr>
-            <tr>
-                <td class="time">5:00</td>
-                <td>የቁርስ የፎቶ ፕሮግራም በሙሽራው ቤት</td>
-            </tr>
-            <tr>
-                <td class="time">7:00</td>
-                <td>ጉዞ ወደ ሙሽሪት ቤት</td>
-            </tr>
-            <tr>
-                <td class="time">8:00</td>
-                <td>የምሳ ፕሮግራም ቤት (ከቀኑ 7:00 ሰዓት ጀምሮ ለሚደረገው የምሳ ግብዣ)</td>
-            </tr>
-            <tr>
-                <td class="time">10:00</td>
-                <td>የፎቶ ፕሮግራም በሙሽሪት ቤት እና በመናፈሻ</td>
-            </tr>
-            <tr>
-                <td class="time">11:30</td>
-                <td>ጉዞ ወደ ሙሽራው ቤት</td>
-            </tr>
-            <tr>
-                <td class="time">12:30</td>
-                <td>የክሌት ፕሮግራም</td>
-            </tr>
-            <tr>
-                <td class="time">1:00</td>
-                <td>የኬክ ፕሮግራም</td>
-            </tr>
-            <tr>
-                <td class="time">2:00</td>
-                <td>የፎቶ እና የፕሮግራሙ ፍጻሜ</td>
-            </tr>
-        </table>
+            <div class="parents">
+                <strong>አካባሪዎች (ወላጆች)፦</strong><br>
+                • አቶ ታደሰ ደበሌ እና ወ/ሮ መሰረት በየነ
+            </div>
 
-        <a href="https://forms.google.com" target="_blank" class="rsvp-btn">ይገረሙ/ይምጡ (RSVP ያድርጉ)</a>
+            <!-- የጀርባ ባህላዊ የሰርግ መዝሙር (Audio) -->
+            <div class="audio-player">
+                <p style="font-size:0.85rem; margin-bottom:5px; color:#666;">🎵 ማጀቢያ መዝሙር ለማዳመጥ አጫውት የሚለውን ይጫኑ፡</p>
+                <audio controls loop style="width: 80%; max-width: 300px;">
+                    <!-- ወደፊት የራስዎን የሰርግ መዝሙር ሊንክ እዚህ መተካት ይችላሉ -->
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    የእርስዎ ብሮውዘር ኦዲዮ አይደግፍም።
+                </audio>
+            </div>
 
-        <div class="footer-address">
-            አድራሻ፦ ውሃ ልማት በርታ መለስ ጠጠር ማምረቻ
+            <!-- የዕለት መርሃ-ግብር (ከፋይል 1000024911.jpg የተወሰደ) -->
+            <div class="schedule-section">
+                <div class="schedule-title"> የዕለቱ ሙሉ መርሃ-ግብር </div>
+                
+                <div class="timeline-item">
+                    <div class="time">9:00 - 3:00</div>
+                    <div class="event">ስርዓተ ጋብቻ እና ቅዳሴ <br><small style="color:#666;">(በደብረ ስሑም መ/መ ቅዱስ ዮሐንስ ቤ/ክ)</small></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">3:30</div>
+                    <div class="event">የቤተክርስቲያን ፕሮግራም ይጠናቀቃል</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">4:00</div>
+                    <div class="event">ከቤተክርስቲያን ወደ ሙሽራው ቤት ጉዞ</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">5:00</div>
+                    <div class="event">የቁርስና የፎቶ ፕሮግራም በሙሽራው ቤት</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">7:00</div>
+                    <div class="event">ጉዞ ወደ ሙሽሪት ቤት</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">8:00</div>
+                    <div class="event">የምሳ ፕሮግራም መጀመር</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">10:00</div>
+                    <div class="event">የፎቶ ፕሮግራም በሙሽሪት ቤት እና በመናፈሻ</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">12:30</div>
+                    <div class="event">የክሌት እና የኬክ መቁረስ ፕሮግራም</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">2:00</div>
+                    <div class="event">የፎቶ እና የፕሮግራሙ ፍጻሜ</div>
+                </div>
+            </div>
+
+            <br><br>
+            <!-- RSVP (የመምጫ ማረጋገጫ ፎርም) -->
+            <a href="https://forms.google.com" target="_blank" class="rsvp-btn">በደስታ እገኛለሁ (RSVP)</a>
+
+            <div class="footer-address">
+                📍 አድራሻ፦ ውሃ ልማት በርታ መለስ ጠጠር ማምረቻ
+            </div>
         </div>
     </div>
 
-    <div class="tilet-border"></div>
+    <div class="tilet-top"></div>
 
 </body>
 </html>
